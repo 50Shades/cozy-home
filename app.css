@@ -8716,7 +8716,7 @@ iframe {
   }
   .col-content {
     width: 64rem;
-    margin: auto;
+    margin: 0 auto;
   }
   .u-hide--tablet {
     display: none !important;
