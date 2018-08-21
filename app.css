@@ -4209,9 +4209,11 @@ p {
   height: 1.5em;
   width: 1.5em;
 }
+h2 {
+  margin: 2rem 0 1rem;
+}
 .connector-list {
   list-style: none;
-  margin: 4rem -0.7rem 2rem;
   border-radius: 0.5rem;
   background: rgba(255,255,255,0.7);
   display: -webkit-box;
@@ -4223,6 +4225,20 @@ p {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 1rem 1.25rem;
+}
+.app-list .item-wrapper {
+  display: inline-block;
+  margin: 0 1.5rem 0 0;
+  width: 8.75rem;
+  height: 8.75rem;
+  background: #fff;
+}
+.app-list .item-wrapper .item-header {
+  height: 5.5rem;
+}
+.app-list .item-wrapper .item-header .item-icon {
+  width: 4rem;
+  height: 4rem;
 }
 .item-wrapper {
   position: relative;
@@ -4259,7 +4275,34 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.item-wrapper.\--add-service .item-header .item-icon {
+  height: 2rem;
+  width: 2rem;
   border: 2px dashed #d6d8da;
+  border-radius: 50%;
+  padding: 1rem;
+  color: #d6d8da;
+}
+.item-wrapper.\--add-service .item-add-service-label {
+  color: #5d6165;
+  text-transform: uppercase;
+}
+.item-wrapper.\--add-service[aria-busy] {
+  opacity: 0.8;
+}
+.item-wrapper.\--add-service[aria-busy]:hover {
+  background-color: transparent;
+  -webkit-transform: none;
+          transform: none;
+}
+.item-wrapper.\--add-service[aria-busy] .item-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .item-wrapper .item-header {
   margin-bottom: 0.5rem;
@@ -4301,6 +4344,8 @@ p {
   color: #95999d;
 }
 .item-wrapper .item-title {
+  width: 80%;
+  margin: auto;
   margin-bottom: 0;
   color: #000;
   font-size: 0.875rem;
@@ -4322,11 +4367,13 @@ p {
   white-space: nowrap;
 }
 .item-wrapper .item-subtitle-error,
+.item-wrapper .item-subtitle-last-sync,
 .item-wrapper .item-subtitle-user-error {
   font-size: 0.75rem;
-  color: #32363f;
+  color: #95999d;
 }
 .item-wrapper .item-subtitle-error .icon,
+.item-wrapper .item-subtitle-last-sync .icon,
 .item-wrapper .item-subtitle-user-error .icon {
   vertical-align: bottom;
   margin-right: 0.25rem;
@@ -4356,7 +4403,7 @@ p {
   bottom: 1.25rem;
   right: 1em;
 }
-.item-wrapper .item-add-service-button {
+.item-wrapper .item-add-service-label {
   font-size: 16px;
   font-weight: bold;
 }
@@ -8814,21 +8861,6 @@ iframe {
   .col-top-bar button {
     width: 100%;
   }
-  .app-list {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    height: 10.75rem;
-    overflow-x: auto;
-  }
-  .app-list::-webkit-scrollbar {
-    display: none;
-  }
-  .app-list::after {
-    width: 1rem;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    content: '';
-  }
   .connector-list {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -8846,6 +8878,21 @@ iframe {
   }
   .connector-list {
     margin: 2rem -1rem;
+  }
+  .app-list {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 10.75rem;
+    overflow-x: auto;
+  }
+  .app-list::-webkit-scrollbar {
+    display: none;
+  }
+  .app-list::after {
+    width: 1rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    content: '';
   }
   .u-title-h1--2hfBI {
     font-size: 1.25rem;
