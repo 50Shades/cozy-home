@@ -2877,7 +2877,7 @@ small-screen()
 }
 .app-list .item-wrapper {
   display: inline-block;
-  margin: 0 1.5rem 0 0;
+  margin: 0 1.2rem 1.2rem 0;
   width: 8.75rem;
   height: 8.75rem;
   background: #fff;
