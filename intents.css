@@ -2863,21 +2863,40 @@ h2 {
 .connector-list {
 small-screen()
   list-style: none;
-  border-radius: 0.5rem;
-  background: rgba(255,255,255,0.7);
   display: -webkit-box;
   display: -ms-flexbox;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.7);
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 1rem 1.25rem;
+  padding: 1rem 0.53rem;
+}
+.connector-list.col-picture-for-empty-list {
+  background-color: #fff;
+}
+.app-list {
+small-screen()
+  margin: 0 -0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .app-list .item-wrapper {
   display: inline-block;
-  margin: 0 1.2rem 1.2rem 0;
+  margin: 0 0.75rem 1.5rem;
   width: 8.75rem;
   height: 8.75rem;
   background: #fff;
@@ -2893,8 +2912,8 @@ small-screen()
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 0.5rem;
-  margin: 0.7em;
+  border-radius: 0.25rem;
+  margin: 0.53rem;
   padding-bottom: 1rem;
   width: 8.75rem;
   height: 8.75rem;
@@ -2930,11 +2949,11 @@ small-screen()
   width: 2rem;
   border: 2px dashed #d6d8da;
   border-radius: 50%;
-  padding: 1rem;
-  color: #d6d8da;
+  padding: calc(1rem - 2px);
+  color: #95999d;
 }
 .item-wrapper.\--add-service .item-add-service-label {
-  color: #5d6165;
+  color: #95999d;
   text-transform: uppercase;
 }
 .item-wrapper.\--add-service[aria-busy] {
