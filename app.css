@@ -9267,9 +9267,6 @@ iframe {
 }
 
 @media (max-width: 40em) {
-  .introjs-tooltiptext div {
-    display: none;
-  }
   .introjs-tooltiptext h1 {
     font-size: 1.5em;
   }
